@@ -5,70 +5,68 @@ window.addEventListener("load", () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("submit form");
+      let task = input.value;
 
-    let task = input.value;
+      let taskItem = document.createElement("div");
+      taskItem.classList.add("task");
 
-    let taskItem = document.createElement("div");
-    taskItem.classList.add("task");
+      let taskContent = document.createElement("div");
+      taskContent.classList.add("content");
 
-    let taskContent = document.createElement("div");
-    taskContent.classList.add("content");
+      taskItem.appendChild(taskContent);
 
-    taskItem.appendChild(taskContent);
+      let taskInput = document.createElement("input");
+      taskInput.classList.add("text");
+      taskInput.type = "text";
+      taskInput.value = task;
+      taskInput.setAttribute("readonly", "readonly");
 
-    let taskInput = document.createElement("input");
-    taskInput.classList.add("text");
-    taskInput.type = "text";
-    taskInput.value = task;
-    taskInput.setAttribute("readonly", "readonly");
+      taskContent.appendChild(taskInput);
 
-    taskContent.appendChild(taskInput);
+      let taskActions = document.createElement("div");
+      taskActions.classList.add("actions");
 
-    let taskActions = document.createElement("div");
-    taskActions.classList.add("actions");
+      let checkBox = document.createElement("input");
+      checkBox.classList.add("checkbox");
+      checkBox.type = "checkbox";
 
-    let checkBox = document.createElement("input");
-    checkBox.classList.add("checkbox");
-    checkBox.type = "checkbox";
+      let taskEdit = document.createElement("button");
+      taskEdit.classList.add("edit");
+      taskEdit.innerText = "Editar";
 
-    let taskEdit = document.createElement("button");
-    taskEdit.classList.add("edit");
-    taskEdit.innerText = "Editar";
+      let taskDelete = document.createElement("button");
+      taskDelete.classList.add("delete");
+      taskDelete.innerText = "Apagar";
 
-    let taskDelete = document.createElement("button");
-    taskDelete.classList.add("delete");
-    taskDelete.innerText = "Apagar";
+      taskActions.appendChild(checkBox);
+      taskActions.appendChild(taskEdit);
+      taskActions.appendChild(taskDelete);
 
-    taskActions.appendChild(checkBox);
-    taskActions.appendChild(taskEdit);
-    taskActions.appendChild(taskDelete);
+      taskItem.appendChild(taskActions);
 
-    taskItem.appendChild(taskActions);
+      list.appendChild(taskItem);
 
-    list.appendChild(taskItem);
+      input.value = "";
 
-    input.value = "";
+      checkBox.addEventListener("change", function () {
+        if (this.checked) {
+          alert("Muito bem!");
+        }
+      });
 
-    checkBox.addEventListener('change', function() {
-      if (this.checked) {
-        alert("Muito bem!"); 
-      }
-    })
+      taskEdit.addEventListener("click", (event) => {
+        if (taskEdit.innerText.toLowerCase() == "edit") {
+          taskEdit.innerText = "Salvar";
+          taskInput.removeAttribute("readonly");
+          taskInput.focus();
+        } else {
+          taskEdit.innerText = "Editar";
+          taskInput.setAttribute("readonly", "readonly");
+        }
+      });
 
-    taskEdit.addEventListener("click", (event) => {
-      if (taskEdit.innerText.toLowerCase() == "edit") {
-        taskEdit.innerText = "Salvar";
-        taskInput.removeAttribute("readonly");
-        taskInput.focus();
-      } else {
-        taskEdit.innerText = "Editar";
-        taskInput.setAttribute("readonly", "readonly");
-      }
-    });
-
-    taskDelete.addEventListener("click", (event) => {
-      list.removeChild(taskItem);
-    });
+      taskDelete.addEventListener("click", (event) => {
+        list.removeChild(taskItem);
+      });
   });
 });

@@ -20,7 +20,7 @@
     <div class="container">
       <!-- Title -->
       <div>
-        <h1>Listas</h1>
+        <h1>Crie sua lista</h1>
       </div>
 
       <!-- Insert new to do -->
@@ -29,8 +29,10 @@
           <input
             type="text"
             placeholder="Insira uma atividade"
+            autocomplete="off"
             id="new-task-input"
             class="new-task"
+            size="50"
           />
           <input type="submit" value="+" id="new-task-submit" />
         </form>
@@ -69,6 +71,9 @@
 
 
       </section>
+
+      <button class="print-button" onclick="window.print()">Imprimir</button>
+
     </div>
 
     <script src="/src/index.js"></script>

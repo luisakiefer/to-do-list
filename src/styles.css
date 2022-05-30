@@ -35,7 +35,13 @@ input {
 button {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
+  font-size: 13px;
 }
+
+input.checkbox {
+  margin-right: 15px;
+}
+
 
 .text {
   border-radius: 5px; 
@@ -80,3 +86,10 @@ button {
   border-radius: 5px;
 }
 
+.print-button {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 8px 20px;
+  font-size: 13px;
+  border-radius: 6px;
+}
