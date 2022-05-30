@@ -11,9 +11,12 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500&display=swap"
+      rel="stylesheet"
+    />
     <link href="/src/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -24,7 +27,7 @@
       </div>
 
       <!-- Insert new to do -->
-      <div class="task-container">
+      <div class="d-flex task-container">
         <form id="new-task-form">
           <input
             type="text"
@@ -41,10 +44,9 @@
       <!-- List of To Dos -->
 
       <section class="task-list">
-        <h3>atividades | compras | coisas a fazer </h3>
+        <h3>atividades | compras | coisas a fazer</h3>
 
         <div id="tasks">
-
           <!--
           <div class="task">
               <div class="content"> 
@@ -64,16 +66,10 @@
             </li>
               <ul>
           </div> 
-        -->
-
-
-        </div>
-
-
+        --></div>
       </section>
 
       <button class="print-button" onclick="window.print()">Imprimir</button>
-
     </div>
 
     <script src="/src/index.js"></script>
