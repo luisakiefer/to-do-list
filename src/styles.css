@@ -1,19 +1,82 @@
-h1 {
-  color: blue;
+:root {
+  --light-blue: #54699B;
+  --lighter-blue: #899AC1;
+  --dark-blue: #344366;
 }
 
-#new-task-input {
-  color: black;
+h1,
+h3 {
+  color: var(--dark-blue);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
-#new-task-submit {
-  color: red;
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-#tasks .task {
-  color: blue;
+body {
+  background-color: var(--light-blue);
 }
 
-.task .content .text {
-  color: red;
+input, button {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  background-color: var(--lighter-blue);
 }
+
+input {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+.text {
+  border-radius: 5px; 
+  padding: 12px;
+  background-color: var(--lighter-blue);
+  color: #D1DDF9;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.container {
+  max-width: 800px;
+  margin-top: 60px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between
+}
+
+.new-task{
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  
+}
+
+.task-list {
+  margin-top: 30px;
+
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px; 
+  background-color: var(--lighter-blue);
+  border-radius: 5px;
+}
+

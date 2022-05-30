@@ -3,10 +3,9 @@ window.addEventListener("load", () => {
   let input = document.querySelector("#new-task-input");
   let list = document.querySelector("#tasks");
 
-  console.log(form);
-
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    console.log("submit form");
 
     let task = input.value;
 
@@ -26,14 +25,22 @@ window.addEventListener("load", () => {
 
     taskContent.appendChild(taskInput);
 
+    let taskActions = document.createElement("div");
+    taskActions.classList.add("actions");
+
+    let checkBox = document.createElement("input");
+    checkBox.classList.add("checkbox");
+    checkBox.type = "checkbox";
+
     let taskEdit = document.createElement("button");
     taskEdit.classList.add("edit");
-    taskEdit.innerTect = "Editar";
+    taskEdit.innerText = "Editar";
 
-    let taskDelete = documente.createElement("button");
+    let taskDelete = document.createElement("button");
     taskDelete.classList.add("delete");
-    taskDelete.innerText = "Deletar";
+    taskDelete.innerText = "Apagar";
 
+    taskActions.appendChild(checkBox);
     taskActions.appendChild(taskEdit);
     taskActions.appendChild(taskDelete);
 
@@ -42,6 +49,12 @@ window.addEventListener("load", () => {
     list.appendChild(taskItem);
 
     input.value = "";
+
+    checkBox.addEventListener('change', function() {
+      if (this.checked) {
+        alert("Muito bem!"); 
+      }
+    })
 
     taskEdit.addEventListener("click", (event) => {
       if (taskEdit.innerText.toLowerCase() == "edit") {
