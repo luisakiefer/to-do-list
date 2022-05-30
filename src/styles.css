@@ -1,3 +1,19 @@
 h1 {
   color: blue;
 }
+
+#new-task-input {
+  color: black;
+}
+
+#new-task-submit {
+  color: red;
+}
+
+#tasks .task {
+  color: blue;
+}
+
+.task .content .text {
+  color: red;
+}
