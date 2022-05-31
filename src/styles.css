@@ -38,10 +38,21 @@ button {
   font-size: 13px;
 }
 
+button:hover {
+  color: white;
+}
+
+button:active {
+  color: white;
+}
+
 input.checkbox {
   margin-right: 15px;
 }
 
+input.text {
+  width: 600px;
+}
 
 .text {
   border-radius: 5px; 
@@ -59,7 +70,7 @@ input.checkbox {
 
 .task-container {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .new-task{
@@ -70,7 +81,7 @@ input.checkbox {
 
 .content {
   display: flex;
-  
+  margin-left: -5px;
 }
 
 .task-list {
