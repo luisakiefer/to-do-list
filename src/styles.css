@@ -1,13 +1,13 @@
 :root {
-  --light-blue: #54699B;
-  --lighter-blue: #899AC1;
+  --light-blue: #54699b;
+  --lighter-blue: #899ac1;
   --dark-blue: #344366;
 }
 
 h1,
 h3 {
   color: var(--dark-blue);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
 }
 
@@ -20,7 +20,8 @@ body {
   background-color: var(--light-blue);
 }
 
-input, button {
+input,
+button {
   border-radius: 8px;
   border: none;
   outline: none;
@@ -29,20 +30,16 @@ input, button {
 }
 
 input {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 button {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 13px;
 }
 
 button:hover {
-  color: white;
-}
-
-button:active {
   color: white;
 }
 
@@ -54,14 +51,24 @@ input.text {
   width: 600px;
 }
 
-.text {
-  border-radius: 5px; 
-  padding: 12px;
-  background-color: var(--lighter-blue);
-  color: #D1DDF9;
-  font-family: 'Courier New', Courier, monospace;
+#tasks {
+  direction: column;
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-content: stretch;
+  margin-left: -18px;
+  flex-wrap: wrap;
 }
 
+.text {
+  border-radius: 5px;
+  padding: 12px;
+  background-color: var(--lighter-blue);
+  color: #d1ddf9;
+  font-family: "Courier New", Courier, monospace;
+}
 
 .container {
   max-width: 800px;
@@ -73,7 +80,7 @@ input.text {
   justify-content: space-between;
 }
 
-.new-task{
+.new-task {
   border: none;
   border-radius: 6px;
   background-color: white;
@@ -86,13 +93,12 @@ input.text {
 
 .task-list {
   margin-top: 30px;
-
 }
 
 .task {
   display: flex;
   justify-content: space-between;
-  margin: 5px; 
+  margin: 5px;
   background-color: var(--lighter-blue);
   border-radius: 5px;
 }
@@ -103,4 +109,14 @@ input.text {
   padding: 8px 20px;
   font-size: 13px;
   border-radius: 6px;
+}
+
+@media (max-width: 414px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
 }
